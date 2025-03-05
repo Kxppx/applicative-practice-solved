@@ -10,7 +10,7 @@ export function getAveragePlanetsTemperature(data) {
   let sum = data.planets.reduce((acc, planet) => {
     if (planet.avgTemp && planet.avgTemp > 0) {
       acc += planet.avgTemp;
-      count += 1;
+      count++;
     }
     return acc;
   }, 0);
