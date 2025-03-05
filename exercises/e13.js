@@ -6,6 +6,15 @@ import { data } from "../data/data";
 
 export function getAveragePlanetsTemperature(data) {
   // Your code goes here...
+  let count = 0;
+  let sum = data.planets.reduce((acc, planet) => {
+    if (planet.avgTemp && planet.avgTemp > 0) {
+      acc += planet.avgTemp;
+      count += 1;
+    }
+    return acc;
+  }, 0);
+  return sum / count;
 }
 
 
